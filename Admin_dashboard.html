@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JobBridge - Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- sidebar -->
+    <nav class="sidebar">
+      <a class="logo" href="admin.html">JobBridge</a>
+      <a class="menu active" href="#">Overview</a>
+      <a class="menu" href="#">Companies</a>
+      <a class="menu" href="#">Job seekers</a>
+      <a class="menu" href="#">Job posts</a>
+      <a class="menu" href="#">Placements</a>
+      <a class="menu" href="#">Reviews</a>
+      <a class="menu" href="#">Payments</a>
+      <a class="menu" href="#">Employees</a>
+      <a class="menu" href="#">Settings</a>
+    </nav>
+
+    <main class="content">
+      <div class="top-row">
+        <h1>Admin panel</h1>
+        <a class="logout" href="login.html">Log out</a>
+      </div>
+
+      <!--left menu-->
+      <div class="stats">
+        <div class="stat"><p>Job seekers</p><b>1,250</b></div>
+        <div class="stat"><p>Companies</p><b>84</b></div>
+        <div class="stat"><p>Live job posts</p><b>63</b></div>
+        <div class="stat"><p>People hired</p><b>310</b></div>
+      </div>
+
+      <!--worker request-->
+      <section class="box">
+        <h2>Worker verification requests</h2>
+        <p class="small-text">Check each CV. After you verify it, the worker can apply for jobs.</p>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Worker</th><th>Field</th><th>Skills</th><th>CV file</th><th></th></tr>
+            <tr>
+              <td>Mizan R.</td><td>Computer Science</td><td>Python, SQL</td><td>mizan_cv.pdf</td>
+              <td><button class="btn">Verify</button> <button class="btn-outline">Reject</button></td>
+            </tr>
+            <tr>
+              <td>Farhana K.</td><td>Accounting</td><td>Tally, Excel</td><td>farhana_cv.pdf</td>
+              <td><button class="btn">Verify</button> <button class="btn-outline">Reject</button></td>
+            </tr>
+            <tr>
+              <td>Imran T.</td><td>Mechanical Diploma</td><td>Repair, Safety</td><td>imran_cv.pdf</td>
+              <td><button class="btn">Verify</button> <button class="btn-outline">Reject</button></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- Company post -->
+      <section class="box">
+        <h2>Company job posts to review</h2>
+        <p class="small-text">After you approve a post, all job seekers can see it.</p>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Job</th><th>Company</th><th>Type</th><th>Workers</th><th></th></tr>
+            <tr>
+              <td>Warehouse Worker</td><td>Swift Logistics</td><td>Full-time</td><td>6</td>
+              <td><button class="btn">Approve</button> <button class="btn-outline">Reject</button></td>
+            </tr>
+            <tr>
+              <td>Customer Support Agent</td><td>Brightline Studio</td><td>Part-time</td><td>4</td>
+              <td><button class="btn">Approve</button> <button class="btn-outline">Reject</button></td>
+            </tr>
+            <tr>
+              <td>Shop Cashier</td><td>Northwind Retail</td><td>Contract</td><td>2</td>
+              <td><button class="btn">Approve</button> <button class="btn-outline">Reject</button></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <!--workers working job list-->
+      <section class="box">
+        <h2>Who is working where</h2>
+        <p class="small-text">Workers hired through JobBridge.</p>
+        <div class="table-wrap">
+          <table>
+            <tr><th>Worker</th><th>Company</th><th>Job</th><th>Started</th><th>Days worked</th><th>Status</th></tr>
+            <tr>
+              <td>Rahim A.</td><td>Northwind Retail</td><td>Sales Assistant</td><td>2026-08-20</td><td>56 days</td>
+              <td><span class="tag">Working</span></td>
+            </tr>
+            <tr>
+              <td>Nusrat J.</td><td>Brightline Studio</td><td>Graphic Design Intern</td><td>2026-09-10</td><td>35 days</td>
+              <td><span class="tag">Working</span></td>
+            </tr>
+            <tr>
+              <td>Tania S.</td><td>Northwind Retail</td><td>Sales Assistant</td><td>2026-07-01</td><td>61 days</td>
+              <td><span class="tag tag-warn">Completed</span></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <!--fee of employes-->
+      <div class="two-boxes">
+
+        <section class="box">
+          <h2>Company fee</h2>
+          <p class="small-text">One-time fee a company pays to open an account.</p>
+          <label for="fee">Setup fee</label>
+          <input type="text" id="fee" value="500">
+          <button class="btn">Save fee</button>
+        </section>
+        
+        <!--employee list-->
+        <section class="box">
+          <h2>Employees</h2>
+          <p class="small-text">Staff who review posts and CVs.</p>
+          <div class="list-row"><span>Staff member 1</span><span class="tag">Moderator</span></div>
+          <div class="list-row"><span>Staff member 2</span><span class="tag">Support</span></div>
+          <br>
+          <label for="emp">New employee name</label>
+          <input type="text" id="emp">
+          <button class="btn">Add employee</button>
+        </section>
+
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>
