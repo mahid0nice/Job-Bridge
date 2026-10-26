@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e2e8f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 12px 0;
+    margin-bottom: 20px;
+}
+
+.header-box {
+    width: 750px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: 1px solid #60a5fa;
+    padding: 7px 16px;
+    margin-left: 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: #f59e0b;
+    color: #000000;
+}
+
+.container {
+    width: 750px;
+    margin: 0 auto 30px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+}
+
+.round-logo {
+    width: 100px;
+    height: 100px;
+    background-color: #e9d5ff;
+    border: 3px solid #5b21b6;
+    border-radius: 50%;
+    color: #5b21b6;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    margin-right: 15px;
+}
+
+fieldset {
+    background-color: #f8fafc;
+    border: 1px solid #2563eb;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+legend {
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+
+td {
+    padding: 6px;
+    vertical-align: top;
+}
+
+.jobs-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.jobs-table th {
+    background-color: #dbeafe;
+    color: #1e3a8a;
+    padding: 8px;
+    text-align: left;
+}
+
+.jobs-table td {
+    padding: 8px;
+}
+
+.jobs-table tbody tr:hover {
+    background-color: #eff6ff;
+}
+
+caption {
+    font-weight: bold;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+/* Post a New Job Buttons */
+.submit-btn {
+    background-color: #16a34a;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background-color: #15803d;
+}
+
+.submit-btn:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.reset-btn {
+    background-color: #dc2626;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.reset-btn:hover {
+    background-color: #b91c1c;
+}
