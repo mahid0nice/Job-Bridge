@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JobBridge</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="brand"><b>JobBridge</b></div>
+    <div class="nav">
+      <a href="#hiring">Hiring</a>
+      <a href="#staff">Staff panel</a>
+      Signed in as <b>Employee</b>
+      <button type="button">Log out</button>
+    </div>
+  </div>
+
+  <div id="hiring" class="page">
+    <h1>Hiring &amp; placements</h1>
+
+    <div class="row">
+      <div class="column stat">People hired<br><h2>5</h2></div>
+      <div class="column stat">Working now<br><h2>4</h2></div>
+      <div class="column stat">Jobs completed<br><h2>1</h2></div>
+      <div class="column stat">Average days worked<br><h2>36</h2></div>
+      <div class="column stat">Companies that hired<br><h2>3</h2></div>
+      <div class="column stat">Applications sent<br><h2>0</h2></div>
+    </div>
+
+    <div class="card">
+      <h2>Who is working where</h2>
+      <table border="1">
+        <tr><th>Worker</th><th>Company</th><th>Job</th><th>Location</th><th>Started</th><th>Days worked</th><th>Status</th></tr>
+        <tr><td>Ayesha A.</td><td>Aarong</td><td>Sales Assistant</td><td>Dhaka</td><td>2026-08-20</td><td>56 days</td><td>Working</td></tr>
+        <tr><td>Nusrat J.</td><td>Grameenphone</td><td>Graphic Design Intern</td><td>Dhaka</td><td>2026-09-10</td><td>35 days</td><td>Working</td></tr>
+        <tr><td>Sumaiya H.</td><td>Pathao</td><td>Delivery Rider</td><td>Chattogram</td><td>2026-09-28</td><td>17 days</td><td>Working</td></tr>
+        <tr><td>Tania S.</td><td>Aarong</td><td>Sales Assistant</td><td>Sylhet</td><td>2026-07-01</td><td>61 days</td><td>Completed</td></tr>
+        <tr><td>Maliha M.</td><td>Pathao</td><td>Delivery Rider</td><td>Rajshahi</td><td>2026-10-05</td><td>10 days</td><td>Working</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Reviews (5)</h2>
+      <table border="1">
+        <tr><th>Date</th><th>From</th><th>About</th><th>Type</th><th>Rating</th></tr>
+        <tr><td>2026-10-02</td><td>Aarong</td><td>Ayesha A.</td><td>Company → Worker</td><td>★★★★★</td></tr>
+        <tr><td>2026-10-03</td><td>Ayesha A.</td><td>Aarong</td><td>Worker → Company</td><td>★★★★☆</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div id="staff" class="page">
+    <h1>Staff panel</h1>
+    <p>Employees moderate posts. Fees, roles and settings stay with the admin.</p>
+
+    <div class="row">
+
+      <div class="column">
+        <div class="card">
+          <h2>Add a worker</h2>
+          <form action="" method="get">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter name" required><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter email" required><br><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="age">Age</label><br>
+            <input type="number" id="age" name="age"><br><br>
+
+            <label for="dob">DOB</label><br>
+            <input type="date" id="dob" name="dob"><br><br>
+
+            <label for="file">CV file</label><br>
+            <input type="file" id="file" name="file"><br><br>
+
+            Job type<br>
+            <input type="radio" id="full" name="type" value="full" checked>
+            <label for="full">Full-time</label>
+            <input type="radio" id="part" name="type" value="part">
+            <label for="part">Part-time</label><br><br>
+
+            <label for="city">City</label><br>
+            <select id="city" name="city">
+              <option value="dhaka">Dhaka</option>
+              <option value="chattogram">Chattogram</option>
+              <option value="sylhet">Sylhet</option>
+              <option value="rajshahi">Rajshahi</option>
+              <option value="khulna">Khulna</option>
+              <option value="barishal">Barishal</option>
+              <option value="rangpur">Rangpur</option>
+              <option value="mymensingh">Mymensingh</option>
+            </select><br><br>
+
+            <label for="about">About</label><br>
+            <textarea id="about" name="about" rows="4" cols="25"></textarea><br><br>
+
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">I confirm the CV is correct</label><br><br>
+
+            <button type="submit" class="ok">Add worker</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="column middle">
+        <div class="card">
+          <h2>Worker verification requests (3)</h2>
+          <table border="1">
+            <tr><th>Worker</th><th>Field</th><th>Skills</th><th>CV file</th><th>Action</th></tr>
+            <tr><td>Mim R.</td><td>Computer Science</td><td>Python, SQL</td><td>mim_cv.pdf</td><td><button class="ok">Verify</button> <button class="no">Reject</button></td></tr>
+            <tr><td>Farhana K.</td><td>Accounting</td><td>Tally, Excel</td><td>farhana_cv.pdf</td><td><button class="ok">Verify</button> <button class="no">Reject</button></td></tr>
+            <tr><td>Ishrat T.</td><td>Mechanical Diploma</td><td>Repair, Safety</td><td>ishrat_cv.pdf</td><td><button class="ok">Verify</button> <button class="no">Reject</button></td></tr>
+          </table>
+        </div>
+
+        <div class="card">
+          <h2>Company job posts to review (3)</h2>
+          <table border="1">
+            <tr><th>Job</th><th>Company</th><th>Type</th><th>Action</th></tr>
+            <tr><td>Warehouse Worker</td><td>Daraz Bangladesh</td><td>Full-time</td><td><button class="ok">Approve</button> <button class="no">Reject</button></td></tr>
+            <tr><td>Customer Support Agent</td><td>Grameenphone</td><td>Part-time</td><td><button class="ok">Approve</button> <button class="no">Reject</button></td></tr>
+            <tr><td>Sales Assistant</td><td>Aarong</td><td>Full-time</td><td><button class="ok">Approve</button> <button class="no">Reject</button></td></tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">JobBridge &copy; 2026. <a href="#hiring">Back to top</a></div>
+
+</body>
+</html>
