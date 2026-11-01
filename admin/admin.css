@@ -30,6 +30,16 @@ body {
   text-decoration: none;
 }
 
+.menu{
+  display: block;
+  margin: 0 0 24px 12px;
+  font-weight: 800;
+  font-size: 22px;
+  color: #3FB8A0;
+  background: #18211C;
+  text-decoration: none;
+}
+
 .sidebar a.menu {
   display: block;
   padding: 12px;
