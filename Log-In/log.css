@@ -39,6 +39,7 @@ body {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+  border-radius: 99px;
 }
  
 .form-box {
@@ -47,6 +48,7 @@ body {
   padding: 24px;
   background: #18211C;
   border: 1px solid #2A362F;
+  border-radius: 12px;
 }
  
 .form-box h1 {
