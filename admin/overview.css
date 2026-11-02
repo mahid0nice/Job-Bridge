@@ -41,9 +41,10 @@ body {
 .stat {
   flex: 1;
   padding: 16px;
-  background: #18211C;
-  border: 1px solid #2A362F;
+  background: #36493f;
+  border: 1px solid #9ba59f;
   border-radius: 12px;
+  text-align: center;
 }
 
 .stat p {
@@ -88,7 +89,7 @@ table {
 th, td {
   padding: 12px 8px;
   text-align: left;
-  border-bottom: 1px solid #2A362F;
+  border-bottom: 1px solid #1cdd6d;
   white-space: nowrap;
 }
 
