@@ -1,18 +1,22 @@
+/* ===== JobBridge login and sign up pages ===== */
+
 body {
   margin: 0;
   background: #0F1512;
   color: #EAF0EC;
   font: 15px/1.5 "Segoe UI", system-ui, sans-serif;
 }
- 
+
 * { box-sizing: border-box; }
- 
+
+/* ----- Top bar ----- */
 .loginpage-header {
   background: #18211C;
   border: 1px solid #2A362F;
+  border-radius: 12px;
   margin: 20px;
 }
- 
+
 .loginpage-header .inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -21,14 +25,14 @@ body {
   align-items: center;
   justify-content: space-between;
 }
- 
+
 .logo {
   font-weight: 800;
   font-size: 22px;
   color: #3FB8A0;
   text-decoration: none;
 }
- 
+
 .staff-link {
   border: 1px solid #2A362F;
   color: #EAF0EC;
@@ -36,12 +40,13 @@ body {
   font-weight: 600;
   font-size: 14px;
   padding: 10px 16px;
+  border-radius: 99px;
   min-height: 44px;
   display: inline-flex;
   align-items: center;
-  border-radius: 99px;
 }
- 
+
+/* ----- Form box ----- */
 .form-box {
   max-width: 460px;
   margin: 40px auto;
@@ -50,31 +55,61 @@ body {
   border: 1px solid #2A362F;
   border-radius: 12px;
 }
- 
+
 .form-box h1 {
   margin: 0 0 4px;
   font-size: 28px;
 }
- 
+
 .small-text {
   margin: 0 0 20px;
   color: #9DAAA2;
   font-size: 14px;
 }
- 
+
+/* Role buttons (Job seeker, Company, Admin, Employee) */
 .role-choice {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
   margin-bottom: 16px;
 }
- 
-.role-choice label {
-  flex: 1;
+
+.role-btn {
+  position: relative;
+  display: block;
+}
+
+/* hide the round radio circle */
+.role-btn input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* normal button */
+.role-btn span{
+  display: block;
   padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  background: #0F1512;
   border: 1px solid #2A362F;
+  border-radius: 8px;
   cursor: pointer;
 }
- 
+
+/* chosen button: a little lighter */
+.role-btn input:checked + span {
+  background: #2B4A40;
+  border-color: #3FB8A0;
+}
+
+/* keyboard focus */
+.role-btn input:focus + span {
+  outline: 2px solid #3FB8A0;
+}
+
+/* Labels and inputs */
 .form-box label.field {
   display: block;
   margin-bottom: 4px;
@@ -82,7 +117,7 @@ body {
   font-weight: 600;
   color: #9DAAA2;
 }
- 
+
 .form-box input[type="text"],
 .form-box input[type="email"],
 .form-box input[type="password"] {
@@ -91,15 +126,18 @@ body {
   margin-bottom: 14px;
   padding: 11px 12px;
   border: 1px solid #2A362F;
+  border-radius: 8px;
   background: #0F1512;
   color: #EAF0EC;
   font-size: 15px;
 }
- 
+
+/* Button */
 .btn {
   width: 100%;
   min-height: 44px;
   border: 0;
+  border-radius: 8px;
   background: #3FB8A0;
   color: #0B1210;
   font-size: 15px;
@@ -107,13 +145,14 @@ body {
   cursor: pointer;
 }
 
+/* Link under the button */
 .switch-text {
   margin: 16px 0 0;
   text-align: center;
   font-size: 14px;
   color: #9DAAA2;
 }
- 
+
 .switch-text a {
   color: #3FB8A0;
   font-weight: 600;

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JobBridge - Admin</title>
   <link rel="stylesheet" href="admin.css">
 </head>
 <body>
- 
+
   <div class="sidebar_1">
- 
+
     <nav class="sidebar">
       <div class="logo">JobBridge</div>
- 
+
       <form action="overview.html" target="page-frame">
         <button class="menu" type="submit" formaction="overview.html" autofocus>Overview</button>
         <button class="menu" type="submit" formaction="companies.html">Companies</button>
@@ -22,10 +24,12 @@
         <button class="menu" type="button">Employees</button>
         <button class="menu" type="button">Settings</button>
       </form>
+
+      <a class="sidebar-logout" href="../Log-In/log_in.html">Log out</a>
     </nav>
 
-     <iframe class="content" name="page-frame" src="overview.html" title="Admin page"></iframe>
+    <iframe class="content" name="page-frame" src="overview.html" title="Admin page"></iframe>
   </div>
- 
+
 </body>
 </html>

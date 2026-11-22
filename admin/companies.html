@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JobBridge - Companies</title>
   <link rel="stylesheet" href="companies.css">
 </head>
@@ -10,10 +12,10 @@
 
       <div class="top-row">
         <h1>Companies</h1>
-        <a class="logout" href="login.html" target="_top">Log out</a>
+        <a class="logout" href="../Log-In/log_in.html" target="_top">Log out</a>
       </div>
 
-      <!--First row of all numbers-->
+      <!-- number boxes -->
       <div class="stats">
         <div class="stat"><p>Verified companies</p><b>81</b></div>
         <div class="stat"><p>Waiting for verification</p><b>3</b></div>
@@ -21,16 +23,16 @@
         <div class="stat"><p>Approved posts</p><b>63</b></div>
       </div>
 
-      <!--for worker verification-->
+      <!-- companies waiting for verification -->
       <section class="box">
         <h2>Companies waiting for verification</h2>
-        <p class="small-text">Check the company details.</p>
+        <p class="small-text">Check the company details. After you verify it, the company can post jobs.</p>
         <div class="table-wrap">
           <table>
             <tr><th>Company</th><th>Email</th><th>City</th><th>Fee</th><th>Requested on</th><th></th></tr>
             <tr>
               <td>Greenfield Foods</td><td>hr@greenfield.example</td><td>Dhaka</td><td><span class="tag">Paid</span></td><td>2026-10-28</td>
-              <td><button class="btn" type="submit" >Verify</button> <button class="btn-outline">Reject</button></td>
+              <td><button class="btn">Verify</button> <button class="btn-outline">Reject</button></td>
             </tr>
             <tr>
               <td>Metro Builders</td><td>jobs@metro.example</td><td>Chattogram</td><td><span class="tag">Paid</span></td><td>2026-10-30</td>
@@ -44,7 +46,7 @@
         </div>
       </section>
 
-      <!--for verified companies-->
+      <!-- verified companies -->
       <section class="box">
         <h2>Verified companies</h2>
         <p class="small-text">Companies that can post jobs on JobBridge.</p>
@@ -70,7 +72,7 @@
         </div>
       </section>
 
-      <!-- post requests-->
+      <!-- post requests waiting for approval -->
       <section class="box">
         <h2>Job post requests waiting for approval</h2>
         <p class="small-text">After you approve a post, all job seekers can see it.</p>
@@ -115,6 +117,8 @@
           </table>
         </div>
       </section>
+
     </main>
+
 </body>
 </html>
