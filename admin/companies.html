@@ -5,120 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JobBridge - Companies</title>
   <link rel="stylesheet" href="companies.css">
+  <script src="companies.js"></script>
 </head>
-<body>
+<body onload="showAll()">
 
   <main class="content">
 
-      <div class="top-row">
-        <h1>Companies</h1>
-        <a class="logout" href="../Log-In/log_in.html" target="_top">Log out</a>
+    <div class="top-row">
+      <h1>Companies</h1>
+      <a class="logout" href="../Log-In/log_in.html" target="_top">Log out</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><p>Verified companies</p><b id="n-verified">0</b></div>
+      <div class="stat"><p>Waiting for verification</p><b id="n-waiting">0</b></div>
+      <div class="stat"><p>Posts waiting for approval</p><b id="n-requests">0</b></div>
+      <div class="stat"><p>Approved posts</p><b id="n-approved">0</b></div>
+    </div>
+
+    <section class="box">
+      <h2>Companies waiting for verification</h2>
+      <p class="small-text">Check the company details. After you verify it, the company can post jobs.</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Company</th><th>Email</th><th>City</th><th>Requested on</th><th></th></tr>
+          <tbody id="waiting-rows"></tbody>
+        </table>
       </div>
+    </section>
 
-      <!-- number boxes -->
-      <div class="stats">
-        <div class="stat"><p>Verified companies</p><b>81</b></div>
-        <div class="stat"><p>Waiting for verification</p><b>3</b></div>
-        <div class="stat"><p>Posts waiting for approval</p><b>3</b></div>
-        <div class="stat"><p>Approved posts</p><b>63</b></div>
+    <section class="box">
+      <h2>Verified companies</h2>
+      <p class="small-text">Companies that can post jobs on JobBridge.</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Company</th><th>City</th><th>Verified on</th><th>Live posts</th><th>Workers hired</th><th>Status</th><th></th></tr>
+          <tbody id="verified-rows"></tbody>
+        </table>
       </div>
+    </section>
 
-      <!-- companies waiting for verification -->
-      <section class="box">
-        <h2>Companies waiting for verification</h2>
-        <p class="small-text">Check the company details. After you verify it, the company can post jobs.</p>
-        <div class="table-wrap">
-          <table>
-            <tr><th>Company</th><th>Email</th><th>City</th><th>Fee</th><th>Requested on</th><th></th></tr>
-            <tr>
-              <td>Greenfield Foods</td><td>hr@greenfield.example</td><td>Dhaka</td><td><span class="tag">Paid</span></td><td>2026-10-28</td>
-              <td><button class="btn">Verify</button> <button class="btn-outline">Reject</button></td>
-            </tr>
-            <tr>
-              <td>Metro Builders</td><td>jobs@metro.example</td><td>Chattogram</td><td><span class="tag">Paid</span></td><td>2026-10-30</td>
-              <td><button class="btn">Verify</button> <button class="btn-outline">Reject</button></td>
-            </tr>
-            <tr>
-              <td>Sunrise Clinic</td><td>admin@sunrise.example</td><td>Sylhet</td><td><span class="tag">Paid</span></td><td>2026-11-01</td>
-              <td><button class="btn">Verify</button> <button class="btn-outline">Reject</button></td>
-            </tr>
-          </table>
-        </div>
-      </section>
+    <section class="box">
+      <h2>Job post requests waiting for approval</h2>
+      <p class="small-text">After you approve a post, all job seekers can see it.</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Job</th><th>Company</th><th>Type</th><th>Workers</th><th>Posted on</th><th></th></tr>
+          <tbody id="request-rows"></tbody>
+        </table>
+      </div>
+    </section>
 
-      <!-- verified companies -->
-      <section class="box">
-        <h2>Verified companies</h2>
-        <p class="small-text">Companies that can post jobs on JobBridge.</p>
-        <div class="table-wrap">
-          <table>
-            <tr><th>Company</th><th>City</th><th>Verified on</th><th>Live posts</th><th>Workers hired</th><th>Status</th><th></th></tr>
-            <tr>
-              <td>Northwind Retail</td><td>Dhaka</td><td>2026-06-12</td><td>5</td><td>24</td>
-              <td><span class="tag">Verified</span></td>
-              <td><button class="btn-outline">Suspend</button></td>
-            </tr>
-            <tr>
-              <td>Brightline Studio</td><td>Remote</td><td>2026-07-03</td><td>2</td><td>9</td>
-              <td><span class="tag">Verified</span></td>
-              <td><button class="btn-outline">Suspend</button></td>
-            </tr>
-            <tr>
-              <td>Swift Logistics</td><td>Chattogram</td><td>2026-07-21</td><td>4</td><td>38</td>
-              <td><span class="tag">Verified</span></td>
-              <td><button class="btn-outline">Suspend</button></td>
-            </tr>
-          </table>
-        </div>
-      </section>
+    <section class="box">
+      <h2>Approved posts</h2>
+      <p class="small-text">These posts are live and visible to job seekers.</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Job</th><th>Company</th><th>Type</th><th>Workers</th><th>Approved on</th><th>Applicants</th><th></th></tr>
+          <tbody id="approved-rows"></tbody>
+        </table>
+      </div>
+    </section>
 
-      <!-- post requests waiting for approval -->
-      <section class="box">
-        <h2>Job post requests waiting for approval</h2>
-        <p class="small-text">After you approve a post, all job seekers can see it.</p>
-        <div class="table-wrap">
-          <table>
-            <tr><th>Job</th><th>Company</th><th>Type</th><th>Workers</th><th>Posted on</th><th></th></tr>
-            <tr>
-              <td>Warehouse Worker</td><td>Swift Logistics</td><td>Full-time</td><td>6</td><td>2026-11-01</td>
-              <td><button class="btn">Approve</button> <button class="btn-outline">Reject</button></td>
-            </tr>
-            <tr>
-              <td>Customer Support Agent</td><td>Brightline Studio</td><td>Part-time</td><td>4</td><td>2026-11-01</td>
-              <td><button class="btn">Approve</button> <button class="btn-outline">Reject</button></td>
-            </tr>
-            <tr>
-              <td>Shop Cashier</td><td>Northwind Retail</td><td>Contract</td><td>2</td><td>2026-11-02</td>
-              <td><button class="btn">Approve</button> <button class="btn-outline">Reject</button></td>
-            </tr>
-          </table>
-        </div>
-      </section>
-
-      <!-- approved posts -->
-      <section class="box">
-        <h2>Approved posts</h2>
-        <p class="small-text">These posts are live and visible to job seekers.</p>
-        <div class="table-wrap">
-          <table>
-            <tr><th>Job</th><th>Company</th><th>Type</th><th>Workers</th><th>Approved on</th><th>Applicants</th><th></th></tr>
-            <tr>
-              <td>Sales Assistant</td><td>Northwind Retail</td><td>Full-time</td><td>3</td><td>2026-10-05</td><td>18</td>
-              <td><button class="btn-outline">Remove</button></td>
-            </tr>
-            <tr>
-              <td>Graphic Design Intern</td><td>Brightline Studio</td><td>Internship</td><td>2</td><td>2026-10-12</td><td>11</td>
-              <td><button class="btn-outline">Remove</button></td>
-            </tr>
-            <tr>
-              <td>Delivery Rider</td><td>Swift Logistics</td><td>Part-time</td><td>10</td><td>2026-10-20</td><td>27</td>
-              <td><button class="btn-outline">Remove</button></td>
-            </tr>
-          </table>
-        </div>
-      </section>
-
-    </main>
+  </main>
 
 </body>
 </html>

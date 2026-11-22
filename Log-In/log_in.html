@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JobBridge - Log in</title>
   <link rel="stylesheet" href="log.css">
+
+  <script src="login.js"></script>
 </head>
 <body>
 
@@ -18,7 +20,7 @@
     <h1>Welcome back</h1>
     <p class="small-text">Log in to your JobBridge account.</p>
 
-    <form action="#" method="post">
+    <form id="loginForm" action="#" method="get" onsubmit="return validateForm()">
 
       <div class="role-choice">
         <label class="role-btn"><input type="radio" name="role" value="admin" checked><span>Admin</span></label>
@@ -29,7 +31,9 @@
       <input type="email" id="email" name="email" required>
 
       <label class="field" for="password">Password</label>
-      <input type="password" id="password" name="password" required>
+      <input type="password" id="password" required>
+
+      <p id="message"></p>
 
       <button class="btn" type="submit">Log in</button>
 

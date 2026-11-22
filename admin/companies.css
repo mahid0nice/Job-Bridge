@@ -1,5 +1,4 @@
-/* ===== Companies page styles ===== */
-
+/*Companies page styles */
 body {
   margin: 0;
   background: #0F1512;
@@ -13,7 +12,7 @@ body {
   padding: 24px 32px;
 }
 
-/* ----- Heading row ----- */
+/*Heading row*/
 .top-row {
   display: flex;
   align-items: center;
@@ -36,7 +35,7 @@ body {
   border-radius: 99px;
 }
 
-/* ----- Number boxes ----- */
+/*Number boxes*/
 .stats {
   display: flex;
   gap: 16px;
@@ -61,7 +60,7 @@ body {
   font-size: 28px;
 }
 
-/* ----- Boxes ----- */
+/* Boxes */
 .box {
   margin-bottom: 24px;
   padding: 20px;
@@ -81,7 +80,7 @@ body {
   font-size: 14px;
 }
 
-/* ----- Tables ----- */
+/* Tables */
 .table-wrap {
   overflow-x: auto;
 }
@@ -104,7 +103,7 @@ th {
   font-weight: 600;
 }
 
-/* ----- Buttons ----- */
+/* Buttons */
 .btn {
   min-height: 40px;
   padding: 8px 16px;
@@ -129,7 +128,7 @@ th {
   cursor: pointer;
 }
 
-/* ----- Small labels ----- */
+/* Small labels */
 .tag {
   display: inline-block;
   padding: 3px 12px;
@@ -143,13 +142,12 @@ th {
   color: #FBBF24;
 }
 
-/* ----- Small screens ----- */
+/* Small screens */
 @media (max-width: 800px) {
   .stats { flex-direction: column; }
   .content { padding: 20px; }
 }
 
-/* ----- Button hover (colour changes when the mouse is on the button) ----- */
 .btn:hover {
   background: #66D9C0;
 }

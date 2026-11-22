@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JobBridge - Overview</title>
   <link rel="stylesheet" href="overview.css">
+  <script src="overview.js"></script>
 </head>
 <body>
 
@@ -19,7 +20,7 @@
       <div class="stats">
         <div class="stat"><p>Job seekers</p><b>1,250</b></div>
         <div class="stat"><p>Companies</p><b>84</b></div>
-        <div class="stat"><p>Live job posts</p><b>63</b></div>
+        <div class="stat"><p>Live job posts</p><b id="live-posts">63</b></div>
         <div class="stat"><p>People hired</p><b>310</b></div>
       </div>
 
@@ -32,15 +33,15 @@
             <tr><th>Worker</th><th>Field</th><th>Skills</th><th>CV file</th><th></th></tr>
             <tr>
               <td>Mizan R.</td><td>Computer Science</td><td>Python, SQL</td><td>mizan_cv.pdf</td>
-              <td><button class="btn">Verify</button> <button class="btn-outline">Reject</button></td>
+              <td id="cv1"><button class="btn" onclick="decide('cv1', 'Verified')">Verify</button> <button class="btn-outline" onclick="decide('cv1', 'Rejected')">Reject</button></td>
             </tr>
             <tr>
               <td>Farhana K.</td><td>Accounting</td><td>Tally, Excel</td><td>farhana_cv.pdf</td>
-              <td><button class="btn">Verify</button> <button class="btn-outline">Reject</button></td>
+              <td id="cv2"><button class="btn" onclick="decide('cv2', 'Verified')">Verify</button> <button class="btn-outline" onclick="decide('cv2', 'Rejected')">Reject</button></td>
             </tr>
             <tr>
               <td>Imran T.</td><td>Mechanical Diploma</td><td>Repair, Safety</td><td>imran_cv.pdf</td>
-              <td><button class="btn">Verify</button> <button class="btn-outline">Reject</button></td>
+              <td id="cv3"><button class="btn" onclick="decide('cv3', 'Verified')">Verify</button> <button class="btn-outline" onclick="decide('cv3', 'Rejected')">Reject</button></td>
             </tr>
           </table>
         </div>
@@ -55,15 +56,15 @@
             <tr><th>Job</th><th>Company</th><th>Type</th><th>Workers</th><th></th></tr>
             <tr>
               <td>Warehouse Worker</td><td>Swift Logistics</td><td>Full-time</td><td>6</td>
-              <td><button class="btn">Approve</button> <button class="btn-outline">Reject</button></td>
+              <td id="post1"><button class="btn" onclick="decide('post1', 'Approved')">Approve</button> <button class="btn-outline" onclick="decide('post1', 'Rejected')">Reject</button></td>
             </tr>
             <tr>
               <td>Customer Support Agent</td><td>Brightline Studio</td><td>Part-time</td><td>4</td>
-              <td><button class="btn">Approve</button> <button class="btn-outline">Reject</button></td>
+              <td id="post2"><button class="btn" onclick="decide('post2', 'Approved')">Approve</button> <button class="btn-outline" onclick="decide('post2', 'Rejected')">Reject</button></td>
             </tr>
             <tr>
               <td>Shop Cashier</td><td>Northwind Retail</td><td>Contract</td><td>2</td>
-              <td><button class="btn">Approve</button> <button class="btn-outline">Reject</button></td>
+              <td id="post3"><button class="btn" onclick="decide('post3', 'Approved')">Approve</button> <button class="btn-outline" onclick="decide('post3', 'Rejected')">Reject</button></td>
             </tr>
           </table>
         </div>
@@ -98,20 +99,28 @@
         <section class="box">
           <h2>Company fee</h2>
           <p class="small-text">One-time fee a company pays to open an account.</p>
-          <label for="fee">Setup fee</label>
-          <input type="text" id="fee" value="500">
-          <button class="btn">Save fee</button>
+          <form onsubmit="return saveFee()">
+            <label for="fee">Setup fee</label>
+            <input type="number" id="fee" min="1" value="500" required>
+            <button class="btn" type="submit">Save fee</button>
+          </form>
+          <p id="fee-message" class="small-text"></p>
         </section>
 
         <section class="box">
           <h2>Employees</h2>
           <p class="small-text">Staff who review posts and CVs.</p>
-          <div class="list-row"><span>Staff member 1</span><span class="tag">Moderator</span></div>
-          <div class="list-row"><span>Staff member 2</span><span class="tag">Support</span></div>
+          <div id="employee-list">
+            <div class="list-row"><span>Staff member 1</span><span class="tag">Moderator</span></div>
+            <div class="list-row"><span>Staff member 2</span><span class="tag">Support</span></div>
+          </div>
           <br>
-          <label for="emp">New employee name</label>
-          <input type="text" id="emp">
-          <button class="btn">Add employee</button>
+          <form onsubmit="return addEmployee()">
+            <label for="emp">New employee name</label>
+            <input type="text" id="emp" required>
+            <button class="btn" type="submit">Add employee</button>
+          </form>
+          <p id="emp-message" class="small-text"></p>
         </section>
 
       </div>
