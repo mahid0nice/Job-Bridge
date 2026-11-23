@@ -5,33 +5,25 @@ const jobs = [
 let nextId = 103;
 
 const tableBody = document.getElementById("jobsTableBody");
-const filter = document.getElementById("filterType");
 const jobCount = document.getElementById("jobCount");
 const msg = document.getElementById("formMessage");
 const terms = document.getElementById("Condition");
 const submitBtn = document.getElementById("submitBtn");
 
-function renderJobs(typeFilter) {
+function renderJobs() {
     tableBody.innerHTML = "";
-    let count = 0;
 
     for (const job of jobs) {
-        if (typeFilter === "All" || job.type === typeFilter) {
-            const tr = document.createElement("tr");
-            tr.innerHTML = "<td>" + job.id + "</td><td>" + job.title + "</td><td>" + job.type + "</td><td>" + job.department + "</td><td>" + job.vacancies + "</td><td>" + job.salary + "</td>";
-            tableBody.appendChild(tr);
-            count++;
-        }
+        const tr = document.createElement("tr");
+        tr.innerHTML = "<td>" + job.id + "</td><td>" + job.title + "</td><td>" + job.type + "</td><td>" + job.department + "</td><td>" + job.vacancies + "</td><td>" + job.salary + "</td>";
+        tableBody.appendChild(tr);
     }
-    jobCount.innerHTML = "Showing " + count + " of " + jobs.length + " job(s)";
+
+    jobCount.innerHTML = "Total Posted Jobs: " + jobs.length;
 }
 
 terms.addEventListener("change", function () {
     submitBtn.disabled = !terms.checked;
-});
-
-filter.addEventListener("change", function () {
-    renderJobs(filter.value);
 });
 
 function validateForm() {
@@ -67,8 +59,7 @@ function validateForm() {
     jobs.push(newJob);
     console.log("New Job:", newJob);
 
-    filter.value = "All";
-    renderJobs("All");
+    renderJobs();
     msg.innerHTML = "Success: " + newJob.title + " posted!";
     msg.style.color = "green";
 
@@ -87,4 +78,4 @@ document.getElementById("resetBtn").addEventListener("click", function () {
     submitBtn.disabled = true;
 });
 
-renderJobs("All");
+renderJobs();

@@ -30,15 +30,15 @@
                         <div class="round-logo">LOGO</div>
                     </td>
                     <td><strong>Company Name:</strong></td>
-                    <td>Gravity Studio</td>
+                    <td>NexaTech Solutions Ltd.</td>
                 </tr>
                 <tr>
                     <td><strong>Industry:</strong></td>
-                    <td>Design. Edit. Broadcast.</td>
+                    <td>Information Technology & Software</td>
                 </tr>
                 <tr>
                     <td><strong>Company Email:</strong></td>
-                    <td>hr@gravitystudiobd.com</td>
+                    <td>hr@nexatech.com</td>
                 </tr>
                 <tr>
                     <td><strong>Location:</strong></td>
@@ -46,7 +46,7 @@
                 </tr>
                 <tr>
                     <td><strong>Website:</strong></td>
-                    <td><a href="#">https://gravitystudiobd.web.app/</a></td>
+                    <td><a href="#">https://www.nexatech.com</a></td>
                 </tr>
             </table>
         </fieldset>
@@ -54,15 +54,7 @@
         <fieldset>
             <legend>Current Posted Jobs</legend>
 
-            <div class="filter-bar">
-                <label for="filterType"><strong>Filter by Job Type:</strong></label>
-                <select id="filterType">
-                    <option value="All">All Jobs</option>
-                    <option value="Full-Time">Full-Time</option>
-                    <option value="Internship">Internship</option>
-                </select>
-                <span id="jobCount" class="job-count"></span>
-            </div>
+            <p id="jobCount" class="job-count"></p>
 
             <table class="jobs-table">
                 <caption>Available Positions at NexaTech Solutions Ltd.</caption>
@@ -80,6 +72,7 @@
                 </tbody>
             </table>
         </fieldset>
+
         <form id="jobForm" action="#" method="post" onsubmit="return validateForm()">
             <fieldset>
                 <legend>Post a New Job</legend>
@@ -94,7 +87,7 @@
                     </tr>
                     <tr>
                         <td><label for="Salary">Salary (BDT):</label></td>
-                        <td><input type="number" id="Salary" name="Salary" placeholder="Minimum 5000"></td>
+                        <td><input type="number" id="Salary" name="Salary" placeholder="e.g. 35000"></td>
                     </tr>
                     <tr>
                         <td><label>Job Nature:</label></td>

@@ -96,20 +96,11 @@ td {
 }
 
 input[type="text"],
-input[type="number"],
-select {
+input[type="number"] {
     padding: 6px 8px;
     border: 1px solid #94a3b8;
     border-radius: 4px;
     font-size: 14px;
-}
-
-/* Filter Bar */
-.filter-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
 }
 
 .job-count {
@@ -117,7 +108,7 @@ select {
     color: #1e3a8a;
 }
 
-/* Jobs Table */
+
 .jobs-table {
     width: 100%;
     border-collapse: collapse;
@@ -157,7 +148,6 @@ caption {
     margin-bottom: 0;
 }
 
-/* Post a New Job Buttons */
 .submit-btn {
     background-color: #16a34a;
     color: #ffffff;
